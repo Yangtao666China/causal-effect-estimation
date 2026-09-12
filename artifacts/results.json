@@ -1,0 +1,1340 @@
+{
+  "project": "Econ Causal Lab",
+  "schema_version": 1,
+  "benchmark": {
+    "estimate": 1794.342404270271,
+    "se": 670.9965463815241,
+    "ci_low": 479.18917336248364,
+    "ci_high": 3109.4956351780584
+  },
+  "datasets": [
+    {
+      "id": "experimental",
+      "label": "NSW randomized sample",
+      "n": 445,
+      "treated": 185,
+      "controls": 260
+    },
+    {
+      "id": "observational",
+      "label": "NSW treated + CPS controls",
+      "n": 16177,
+      "treated": 185,
+      "controls": 15992
+    }
+  ],
+  "results": [
+    {
+      "dataset": "experimental",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "split_min": 1794.342404270271,
+      "split_max": 1794.342404270271,
+      "estimate": 1794.342404270271,
+      "se": 670.9965463815241,
+      "ci_low": 479.18917336248364,
+      "ci_high": 3109.4956351780584
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "split_min": 1769.5251493556473,
+      "split_max": 1854.6072098458037,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "split_min": 2050.77309831933,
+      "split_max": 2175.2536246721793,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "observational",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "split_min": -8497.516142636992,
+      "split_max": -8497.516142636992,
+      "estimate": -8497.516142636992,
+      "se": 583.4320770838137,
+      "ci_low": -9641.043013721268,
+      "ci_high": -7353.989271552718
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "split_min": 1231.0422551212814,
+      "split_max": 1248.2738824696005,
+      "estimate": 1231.9711115335651,
+      "se": 648.3991336722022,
+      "ci_low": -38.891190463951034,
+      "ci_high": 2502.8334135310815
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "split_min": 1538.5779559288937,
+      "split_max": 1757.4235894768194,
+      "estimate": 1757.4235894768194,
+      "se": 794.8886199724169,
+      "ci_low": 199.4418943308824,
+      "ci_high": 3315.4052846227564
+    }
+  ],
+  "diagnostics": [
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "clip": 0.01,
+      "ess_controls": 206.38416232869668,
+      "clipped_fraction": 0.0,
+      "clipped_treated_fraction": 0.0,
+      "clipped_control_fraction": 0.0,
+      "max_control_weight": 2.84495890278532,
+      "control_weight_sum": 196.48842722473714,
+      "propensity_bins": [
+        {
+          "left": 0.0,
+          "right": 0.05,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.05,
+          "right": 0.1,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.1,
+          "right": 0.15000000000000002,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.15000000000000002,
+          "right": 0.2,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.2,
+          "right": 0.25,
+          "treated_count": 6,
+          "control_count": 9
+        },
+        {
+          "left": 0.25,
+          "right": 0.30000000000000004,
+          "treated_count": 6,
+          "control_count": 16
+        },
+        {
+          "left": 0.30000000000000004,
+          "right": 0.35000000000000003,
+          "treated_count": 16,
+          "control_count": 27
+        },
+        {
+          "left": 0.35000000000000003,
+          "right": 0.4,
+          "treated_count": 60,
+          "control_count": 111
+        },
+        {
+          "left": 0.4,
+          "right": 0.45,
+          "treated_count": 29,
+          "control_count": 33
+        },
+        {
+          "left": 0.45,
+          "right": 0.5,
+          "treated_count": 21,
+          "control_count": 15
+        },
+        {
+          "left": 0.5,
+          "right": 0.55,
+          "treated_count": 15,
+          "control_count": 14
+        },
+        {
+          "left": 0.55,
+          "right": 0.6000000000000001,
+          "treated_count": 24,
+          "control_count": 19
+        },
+        {
+          "left": 0.6000000000000001,
+          "right": 0.65,
+          "treated_count": 8,
+          "control_count": 10
+        },
+        {
+          "left": 0.65,
+          "right": 0.7000000000000001,
+          "treated_count": 0,
+          "control_count": 5
+        },
+        {
+          "left": 0.7000000000000001,
+          "right": 0.75,
+          "treated_count": 0,
+          "control_count": 1
+        },
+        {
+          "left": 0.75,
+          "right": 0.8,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.8,
+          "right": 0.8500000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.8500000000000001,
+          "right": 0.9,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.9,
+          "right": 0.9500000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.9500000000000001,
+          "right": 1.0,
+          "treated_count": 0,
+          "control_count": 0
+        }
+      ],
+      "balance": [
+        {
+          "feature": "age",
+          "before": 0.10727712146617469,
+          "after": -0.022938541315835545
+        },
+        {
+          "feature": "education",
+          "before": 0.1412198207982868,
+          "after": -0.0008700981430357748
+        },
+        {
+          "feature": "black",
+          "before": 0.04388661137007067,
+          "after": 0.030087734461495715
+        },
+        {
+          "feature": "hispanic",
+          "before": -0.17456107137317184,
+          "after": -0.0073854337208650415
+        },
+        {
+          "feature": "married",
+          "before": 0.09364070075641234,
+          "after": -0.042566372633810204
+        },
+        {
+          "feature": "nodegree",
+          "before": -0.3039864390618202,
+          "after": 0.03417700128729197
+        },
+        {
+          "feature": "re74",
+          "before": -0.002159951190618364,
+          "after": -0.02835190685895317
+        },
+        {
+          "feature": "re75",
+          "before": 0.08386324541782081,
+          "after": -0.032285636932549544
+        }
+      ]
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "clip": 0.01,
+      "ess_controls": 172.49474981658696,
+      "clipped_fraction": 0.0,
+      "clipped_treated_fraction": 0.0,
+      "clipped_control_fraction": 0.0,
+      "max_control_weight": 3.2799504319573733,
+      "control_weight_sum": 214.0216215266767,
+      "propensity_bins": [
+        {
+          "left": 0.0,
+          "right": 0.05,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.05,
+          "right": 0.1,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.1,
+          "right": 0.15000000000000002,
+          "treated_count": 3,
+          "control_count": 0
+        },
+        {
+          "left": 0.15000000000000002,
+          "right": 0.2,
+          "treated_count": 7,
+          "control_count": 14
+        },
+        {
+          "left": 0.2,
+          "right": 0.25,
+          "treated_count": 15,
+          "control_count": 24
+        },
+        {
+          "left": 0.25,
+          "right": 0.30000000000000004,
+          "treated_count": 15,
+          "control_count": 31
+        },
+        {
+          "left": 0.30000000000000004,
+          "right": 0.35000000000000003,
+          "treated_count": 16,
+          "control_count": 39
+        },
+        {
+          "left": 0.35000000000000003,
+          "right": 0.4,
+          "treated_count": 25,
+          "control_count": 30
+        },
+        {
+          "left": 0.4,
+          "right": 0.45,
+          "treated_count": 11,
+          "control_count": 24
+        },
+        {
+          "left": 0.45,
+          "right": 0.5,
+          "treated_count": 22,
+          "control_count": 28
+        },
+        {
+          "left": 0.5,
+          "right": 0.55,
+          "treated_count": 20,
+          "control_count": 17
+        },
+        {
+          "left": 0.55,
+          "right": 0.6000000000000001,
+          "treated_count": 23,
+          "control_count": 22
+        },
+        {
+          "left": 0.6000000000000001,
+          "right": 0.65,
+          "treated_count": 13,
+          "control_count": 13
+        },
+        {
+          "left": 0.65,
+          "right": 0.7000000000000001,
+          "treated_count": 10,
+          "control_count": 9
+        },
+        {
+          "left": 0.7000000000000001,
+          "right": 0.75,
+          "treated_count": 3,
+          "control_count": 7
+        },
+        {
+          "left": 0.75,
+          "right": 0.8,
+          "treated_count": 2,
+          "control_count": 2
+        },
+        {
+          "left": 0.8,
+          "right": 0.8500000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.8500000000000001,
+          "right": 0.9,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.9,
+          "right": 0.9500000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.9500000000000001,
+          "right": 1.0,
+          "treated_count": 0,
+          "control_count": 0
+        }
+      ],
+      "balance": [
+        {
+          "feature": "age",
+          "before": 0.10727712146617469,
+          "after": -0.025861119531225697
+        },
+        {
+          "feature": "education",
+          "before": 0.1412198207982868,
+          "after": 0.007656890135800305
+        },
+        {
+          "feature": "black",
+          "before": 0.04388661137007067,
+          "after": -0.05493594195439425
+        },
+        {
+          "feature": "hispanic",
+          "before": -0.17456107137317184,
+          "after": -0.01692367789553089
+        },
+        {
+          "feature": "married",
+          "before": 0.09364070075641234,
+          "after": 0.008860756219161069
+        },
+        {
+          "feature": "nodegree",
+          "before": -0.3039864390618202,
+          "after": -0.052293032109779675
+        },
+        {
+          "feature": "re74",
+          "before": -0.002159951190618364,
+          "after": -0.07553039536385708
+        },
+        {
+          "feature": "re75",
+          "before": 0.08386324541782081,
+          "after": -0.00682561203545164
+        }
+      ]
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "clip": 0.01,
+      "ess_controls": 1239.4719856753516,
+      "clipped_fraction": 0.8949743462941213,
+      "clipped_treated_fraction": 0.10810810810810811,
+      "clipped_control_fraction": 0.9040770385192596,
+      "max_control_weight": 0.9522813320100036,
+      "control_weight_sum": 315.55136436455643,
+      "propensity_bins": [
+        {
+          "left": 0.0,
+          "right": 0.05,
+          "treated_count": 31,
+          "control_count": 15447
+        },
+        {
+          "left": 0.05,
+          "right": 0.1,
+          "treated_count": 11,
+          "control_count": 190
+        },
+        {
+          "left": 0.1,
+          "right": 0.15000000000000002,
+          "treated_count": 9,
+          "control_count": 98
+        },
+        {
+          "left": 0.15000000000000002,
+          "right": 0.2,
+          "treated_count": 8,
+          "control_count": 34
+        },
+        {
+          "left": 0.2,
+          "right": 0.25,
+          "treated_count": 28,
+          "control_count": 73
+        },
+        {
+          "left": 0.25,
+          "right": 0.30000000000000004,
+          "treated_count": 23,
+          "control_count": 35
+        },
+        {
+          "left": 0.30000000000000004,
+          "right": 0.35000000000000003,
+          "treated_count": 8,
+          "control_count": 19
+        },
+        {
+          "left": 0.35000000000000003,
+          "right": 0.4,
+          "treated_count": 6,
+          "control_count": 23
+        },
+        {
+          "left": 0.4,
+          "right": 0.45,
+          "treated_count": 18,
+          "control_count": 32
+        },
+        {
+          "left": 0.45,
+          "right": 0.5,
+          "treated_count": 43,
+          "control_count": 41
+        },
+        {
+          "left": 0.5,
+          "right": 0.55,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.55,
+          "right": 0.6000000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.6000000000000001,
+          "right": 0.65,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.65,
+          "right": 0.7000000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.7000000000000001,
+          "right": 0.75,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.75,
+          "right": 0.8,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.8,
+          "right": 0.8500000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.8500000000000001,
+          "right": 0.9,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.9,
+          "right": 0.9500000000000001,
+          "treated_count": 0,
+          "control_count": 0
+        },
+        {
+          "left": 0.9500000000000001,
+          "right": 1.0,
+          "treated_count": 0,
+          "control_count": 0
+        }
+      ],
+      "balance": [
+        {
+          "feature": "age",
+          "before": -0.7961833136032784,
+          "after": -0.36015876590235874
+        },
+        {
+          "feature": "education",
+          "before": -0.6785020937632216,
+          "after": -0.31631750407551257
+        },
+        {
+          "feature": "black",
+          "before": 2.427746815040785,
+          "after": 1.0824623685209052
+        },
+        {
+          "feature": "hispanic",
+          "before": -0.05069730518499427,
+          "after": 0.0051710349190097335
+        },
+        {
+          "feature": "married",
+          "before": -1.2326475800509717,
+          "after": -0.591633051424469
+        },
+        {
+          "feature": "nodegree",
+          "before": 0.9038110552301952,
+          "after": 0.43653601144372395
+        },
+        {
+          "feature": "re74",
+          "before": -1.5689896088898152,
+          "after": -0.7851834722660431
+        },
+        {
+          "feature": "re75",
+          "before": -1.7464280567572719,
+          "after": -0.8781332664003053
+        }
+      ]
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "clip": 0.01,
+      "ess_controls": 230.34911953734266,
+      "clipped_fraction": 0.9270569326822031,
+      "clipped_treated_fraction": 0.07567567567567568,
+      "clipped_control_fraction": 0.9369059529764883,
+      "max_control_weight": 11.137515975034953,
+      "control_weight_sum": 324.40203245326603,
+      "propensity_bins": [
+        {
+          "left": 0.0,
+          "right": 0.05,
+          "treated_count": 30,
+          "control_count": 15640
+        },
+        {
+          "left": 0.05,
+          "right": 0.1,
+          "treated_count": 13,
+          "control_count": 128
+        },
+        {
+          "left": 0.1,
+          "right": 0.15000000000000002,
+          "treated_count": 10,
+          "control_count": 60
+        },
+        {
+          "left": 0.15000000000000002,
+          "right": 0.2,
+          "treated_count": 6,
+          "control_count": 48
+        },
+        {
+          "left": 0.2,
+          "right": 0.25,
+          "treated_count": 12,
+          "control_count": 26
+        },
+        {
+          "left": 0.25,
+          "right": 0.30000000000000004,
+          "treated_count": 8,
+          "control_count": 6
+        },
+        {
+          "left": 0.30000000000000004,
+          "right": 0.35000000000000003,
+          "treated_count": 5,
+          "control_count": 20
+        },
+        {
+          "left": 0.35000000000000003,
+          "right": 0.4,
+          "treated_count": 10,
+          "control_count": 14
+        },
+        {
+          "left": 0.4,
+          "right": 0.45,
+          "treated_count": 9,
+          "control_count": 4
+        },
+        {
+          "left": 0.45,
+          "right": 0.5,
+          "treated_count": 6,
+          "control_count": 10
+        },
+        {
+          "left": 0.5,
+          "right": 0.55,
+          "treated_count": 9,
+          "control_count": 8
+        },
+        {
+          "left": 0.55,
+          "right": 0.6000000000000001,
+          "treated_count": 4,
+          "control_count": 7
+        },
+        {
+          "left": 0.6000000000000001,
+          "right": 0.65,
+          "treated_count": 15,
+          "control_count": 8
+        },
+        {
+          "left": 0.65,
+          "right": 0.7000000000000001,
+          "treated_count": 6,
+          "control_count": 3
+        },
+        {
+          "left": 0.7000000000000001,
+          "right": 0.75,
+          "treated_count": 8,
+          "control_count": 2
+        },
+        {
+          "left": 0.75,
+          "right": 0.8,
+          "treated_count": 5,
+          "control_count": 4
+        },
+        {
+          "left": 0.8,
+          "right": 0.8500000000000001,
+          "treated_count": 9,
+          "control_count": 1
+        },
+        {
+          "left": 0.8500000000000001,
+          "right": 0.9,
+          "treated_count": 12,
+          "control_count": 1
+        },
+        {
+          "left": 0.9,
+          "right": 0.9500000000000001,
+          "treated_count": 8,
+          "control_count": 2
+        },
+        {
+          "left": 0.9500000000000001,
+          "right": 1.0,
+          "treated_count": 0,
+          "control_count": 0
+        }
+      ],
+      "balance": [
+        {
+          "feature": "age",
+          "before": -0.7961833136032784,
+          "after": -0.3822152902188936
+        },
+        {
+          "feature": "education",
+          "before": -0.6785020937632216,
+          "after": -0.2985305254051314
+        },
+        {
+          "feature": "black",
+          "before": 2.427746815040785,
+          "after": 1.068950234871164
+        },
+        {
+          "feature": "hispanic",
+          "before": -0.05069730518499427,
+          "after": 0.03561371879717892
+        },
+        {
+          "feature": "married",
+          "before": -1.2326475800509717,
+          "after": -0.578648914726425
+        },
+        {
+          "feature": "nodegree",
+          "before": 0.9038110552301952,
+          "after": 0.40501542168122484
+        },
+        {
+          "feature": "re74",
+          "before": -1.5689896088898152,
+          "after": -0.7214126202921005
+        },
+        {
+          "feature": "re75",
+          "before": -1.7464280567572719,
+          "after": -0.8205419672086941
+        }
+      ]
+    }
+  ],
+  "sensitivity": [
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "clip": 0.001,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "clip": 0.005,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "clip": 0.01,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "clip": 0.025,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "clip": 0.05,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "clip": 0.001,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "clip": 0.005,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "clip": 0.01,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "clip": 0.025,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "clip": 0.05,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "clip": 0.001,
+      "estimate": 1242.6279848071013,
+      "se": 646.8455891531657,
+      "ci_low": -25.189369933103535,
+      "ci_high": 2510.445339547306
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "clip": 0.005,
+      "estimate": 1237.8123943187757,
+      "se": 647.1840766874093,
+      "ci_low": -30.668395988546536,
+      "ci_high": 2506.293184626098
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "clip": 0.01,
+      "estimate": 1231.9711115335651,
+      "se": 648.3991336722022,
+      "ci_low": -38.891190463951034,
+      "ci_high": 2502.8334135310815
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "clip": 0.025,
+      "estimate": 1205.8045431157223,
+      "se": 657.6268495348855,
+      "ci_low": -83.14408197265334,
+      "ci_high": 2494.753168204098
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "clip": 0.05,
+      "estimate": 1170.9538584960123,
+      "se": 692.3053880977137,
+      "ci_low": -185.96470217550655,
+      "ci_high": 2527.872419167531
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "clip": 0.001,
+      "estimate": 1775.0202410922254,
+      "se": 793.6622031798732,
+      "ci_low": 219.44232285967382,
+      "ci_high": 3330.598159324777
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "clip": 0.005,
+      "estimate": 1764.3243472592865,
+      "se": 793.9044298705548,
+      "ci_low": 208.27166471299893,
+      "ci_high": 3320.3770298055742
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "clip": 0.01,
+      "estimate": 1757.4235894768194,
+      "se": 794.8886199724169,
+      "ci_low": 199.4418943308824,
+      "ci_high": 3315.4052846227564
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "clip": 0.025,
+      "estimate": 1748.6839015996586,
+      "se": 802.4410918452534,
+      "ci_low": 175.899361582962,
+      "ci_high": 3321.4684416163554
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "clip": 0.05,
+      "estimate": 1744.5359143952658,
+      "se": 831.0445452039888,
+      "ci_low": 115.68860579544776,
+      "ci_high": 3373.383222995084
+    }
+  ],
+  "simulation": [
+    {
+      "scenario": "good_overlap",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 1335.6226569804476,
+      "rmse": 1347.6021085643365,
+      "coverage": 0.0,
+      "coverage_mc_se": 0.0,
+      "mean_ci_width": 646.0640448158866
+    },
+    {
+      "scenario": "good_overlap",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 565.4516379828016,
+      "rmse": 587.2368381551677,
+      "coverage": 0.06,
+      "coverage_mc_se": 0.023748684174075833,
+      "mean_ci_width": 647.5981957254975
+    },
+    {
+      "scenario": "good_overlap",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 88.52177242821931,
+      "rmse": 203.5196194409291,
+      "coverage": 0.94,
+      "coverage_mc_se": 0.023748684174075843,
+      "mean_ci_width": 815.498062658092
+    },
+    {
+      "scenario": "weak_overlap",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 2480.955494306053,
+      "rmse": 2485.837134556125,
+      "coverage": 0.0,
+      "coverage_mc_se": 0.0,
+      "mean_ci_width": 594.298589843287
+    },
+    {
+      "scenario": "weak_overlap",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 1252.1864657034494,
+      "rmse": 1286.590182752425,
+      "coverage": 0.01,
+      "coverage_mc_se": 0.0099498743710662,
+      "mean_ci_width": 1147.4110199421177
+    },
+    {
+      "scenario": "weak_overlap",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 531.8324092489564,
+      "rmse": 609.5280691940894,
+      "coverage": 0.49,
+      "coverage_mc_se": 0.04998999899979995,
+      "mean_ci_width": 1152.4431867303724
+    },
+    {
+      "scenario": "hidden_confounding",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 2707.580619415066,
+      "rmse": 2713.70631263636,
+      "coverage": 0.0,
+      "coverage_mc_se": 0.0,
+      "mean_ci_width": 728.703905089499
+    },
+    {
+      "scenario": "hidden_confounding",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 2163.860544869929,
+      "rmse": 2171.0891311011655,
+      "coverage": 0.0,
+      "coverage_mc_se": 0.0,
+      "mean_ci_width": 739.8970658994809
+    },
+    {
+      "scenario": "hidden_confounding",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "repetitions": 100,
+      "n": 1000,
+      "bias": 1816.0491139469323,
+      "rmse": 1828.5079162320878,
+      "coverage": 0.0,
+      "coverage_mc_se": 0.0,
+      "mean_ci_width": 927.2011228192392
+    }
+  ],
+  "split_results": [
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "seed": 42,
+      "estimate": 1854.6072098458037,
+      "se": 686.9432320259883,
+      "ci_low": 508.19847507486656,
+      "ci_high": 3201.015944616741
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "seed": 7,
+      "estimate": 1820.1316470128959,
+      "se": 694.6581944724544,
+      "ci_low": 458.6015858468852,
+      "ci_high": 3181.6617081789063
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "seed": 2026,
+      "estimate": 1769.5251493556473,
+      "se": 694.3379747629364,
+      "ci_low": 408.622718820292,
+      "ci_high": 3130.4275798910026
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "seed": 42,
+      "estimate": 2050.77309831933,
+      "se": 758.2617501801149,
+      "ci_low": 564.580067966305,
+      "ci_high": 3536.966128672355
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "seed": 7,
+      "estimate": 2175.2536246721793,
+      "se": 730.9077004719486,
+      "ci_low": 742.67453174716,
+      "ci_high": 3607.8327175971986
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "seed": 2026,
+      "estimate": 2078.987387317684,
+      "se": 738.8582310645546,
+      "ci_low": 630.825254431157,
+      "ci_high": 3527.1495202042106
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "seed": 42,
+      "estimate": 1231.9711115335651,
+      "se": 648.3991336722022,
+      "ci_low": -38.891190463951034,
+      "ci_high": 2502.8334135310815
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "seed": 7,
+      "estimate": 1231.0422551212814,
+      "se": 650.404014966487,
+      "ci_low": -43.749614213033055,
+      "ci_high": 2505.834124455596
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "seed": 2026,
+      "estimate": 1248.2738824696005,
+      "se": 648.8372040322356,
+      "ci_low": -23.447037433581272,
+      "ci_high": 2519.994802372782
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "seed": 42,
+      "estimate": 1757.4235894768194,
+      "se": 794.8886199724169,
+      "ci_low": 199.4418943308824,
+      "ci_high": 3315.4052846227564
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "seed": 7,
+      "estimate": 1538.5779559288937,
+      "se": 806.7282089749408,
+      "ci_low": -42.60933366199015,
+      "ci_high": 3119.7652455197776
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "seed": 2026,
+      "estimate": 1757.1757839651602,
+      "se": 791.6537769444221,
+      "ci_low": 205.5343811540929,
+      "ci_high": 3308.8171867762276
+    }
+  ],
+  "sources": [
+    {
+      "name": "nswre74_treated",
+      "rows": 185,
+      "treatment": 1,
+      "url": "https://users.nber.org/~rdehejia/data/nswre74_treated.txt",
+      "sha256": "e7b742fe0ff07a0f45e129b4ff108bb9611cd83d53604732c48a8a0a3e20eda3"
+    },
+    {
+      "name": "nswre74_control",
+      "rows": 260,
+      "treatment": 0,
+      "url": "https://users.nber.org/~rdehejia/data/nswre74_control.txt",
+      "sha256": "a1364cea459d953dc691a667d99194b4ad335d6d550354fe23a5d2dc58d729b5"
+    },
+    {
+      "name": "cps_controls",
+      "rows": 15992,
+      "treatment": 0,
+      "url": "https://users.nber.org/~rdehejia/data/cps_controls.txt",
+      "sha256": "dce640066f8bcdf447864b158b2cb0390bd3f8d6cbe3a27576a06926477d51f8"
+    },
+    {
+      "name": "Data use & required citations · CC by NC",
+      "url": "https://users.nber.org/~rdehejia/nswdata2.html"
+    }
+  ],
+  "placebo": [
+    {
+      "dataset": "experimental",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "estimate": 265.1463113222453,
+      "se": 305.0442812952303,
+      "ci_low": -332.7404800164061,
+      "ci_high": 863.0331026608967
+    },
+    {
+      "dataset": "experimental",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "estimate": 433.6795604644768,
+      "se": 240.76786806502085,
+      "ci_low": -38.22546094296405,
+      "ci_high": 905.5845818719176
+    },
+    {
+      "dataset": "experimental",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "estimate": 86.3943195277617,
+      "se": 262.3932556095298,
+      "ci_low": -427.89646146691666,
+      "ci_high": 600.68510052244
+    },
+    {
+      "dataset": "observational",
+      "method": "naive",
+      "label": "Unadjusted difference",
+      "estimate": -12118.748062288814,
+      "se": 247.77669602017158,
+      "ci_low": -12604.39038648835,
+      "ci_high": -11633.105738089278
+    },
+    {
+      "dataset": "observational",
+      "method": "linear",
+      "label": "AIPW · linear",
+      "estimate": -1337.7645810863655,
+      "se": 268.0174389809547,
+      "ci_low": -1863.0787614890369,
+      "ci_high": -812.4504006836943
+    },
+    {
+      "dataset": "observational",
+      "method": "hgb",
+      "label": "AIPW · boosted trees",
+      "estimate": -1212.1623439248335,
+      "se": 301.1237250643961,
+      "ci_low": -1802.36484505105,
+      "ci_high": -621.9598427986172
+    }
+  ],
+  "configuration": {
+    "folds": 5,
+    "seeds": [
+      42,
+      7,
+      2026
+    ],
+    "clip": 0.01,
+    "features": [
+      "age",
+      "education",
+      "black",
+      "hispanic",
+      "married",
+      "nodegree",
+      "re74",
+      "re75"
+    ],
+    "outcome": "re78",
+    "treatment": "treatment",
+    "primary_seed": 42,
+    "outcome_units": "historical USD, as supplied; no present-value conversion",
+    "placebo": {
+      "outcome": "re75",
+      "features": [
+        "age",
+        "education",
+        "black",
+        "hispanic",
+        "married",
+        "nodegree",
+        "re74"
+      ],
+      "seed": 42
+    },
+    "simulation": {
+      "repetitions": 100,
+      "n": 1000,
+      "folds": 3,
+      "seed": 2026,
+      "clip": 0.01
+    }
+  },
+  "notes": [
+    "ATT 的因果解释依赖一致性、给定处理前协变量后的 Y(0) 均值可交换性，以及受训者相关区域的重叠。",
+    "观察性数据的未观测混杂不能由机器学习自动消除；截断只是一种数值正则化，不是识别策略。",
+    "NSW 随机样本的均值差是有抽样误差的参考，并非已知真值；它与观察性分析共享受训者，结果并不独立。",
+    "区间是影响函数近似 95% 区间；偏差、重叠不足、小样本与截断会影响覆盖率。",
+    "主结果采用第一个 seed，其余 seed 仅作分折稳定性检查；不挑选最接近实验参考的模型或随机种子。",
+    "金额按来源数据的历史美元口径展示，未换算为当前购买力；报告不是当前培训项目收益预测。",
+    "数据引用：LaLonde (1986), American Economic Review 76:604–620；Dehejia & Wahba (1999), JASA 94:1053–1062；Dehejia & Wahba (2002), Review of Economics and Statistics 84:151–161。数据限署名非商业使用；软件 MIT 许可不改变数据条款。"
+  ],
+  "environment": {
+    "python": "3.12.10",
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1"
+  }
+}

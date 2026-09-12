@@ -1,0 +1,26 @@
+name: Tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install package
+        run: python -m pip install .
+      - name: Unit tests without network data
+        run: python -m unittest discover -s tests -v
+      - name: End-to-end synthetic CSV analysis
+        run: >-
+          python -m econ_causal_lab analyze examples/synthetic.csv
+          --outcome outcome --treatment treatment --features x0,x1,x2,x3,x4
+          --folds 3 --seeds 42 --output outputs/ci
