@@ -1,13 +1,13 @@
 <img src="docs/banner.svg" width="100%" alt="Econ Causal Lab — better predictions, better questions">
 
 <p align="center">
-<a href="https://github.com/Yangtao666China/econ-causal-lab/actions/workflows/tests.yml"><img src="https://github.com/Yangtao666China/econ-causal-lab/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+<a href="https://github.com/Yangtao666China/causal-effect-estimation/actions/workflows/tests.yml"><img src="https://github.com/Yangtao666China/causal-effect-estimation/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
 <img src="https://img.shields.io/badge/AI_%C3%97_Economics-Causal_ML-00866b" alt="AI and economics">
 <img src="https://img.shields.io/badge/Python-3.10%2B-307ab5" alt="Python 3.10+">
 <a href="LICENSE"><img src="https://img.shields.io/badge/Software-MIT-526879" alt="Software license MIT"></a>
 </p>
 
-<h3 align="center">预测收入，不等于识别培训的因果效应。</h3>
+<h1 align="center">因果效应估计：职业培训政策评估</h1>
 <p align="center">A reproducible causal machine-learning workbench for economic research.</p>
 
 给定一个职业培训项目，如何判断它是否提高了参与者的收入？直接比较两组人、用机器学习预测收入、估计培训的因果效应，是三个不同的问题。
@@ -45,8 +45,8 @@ Econ Causal Lab 把**经典经济学数据、交叉拟合双重稳健估计、�
 需要 Python 3.10+，CPU 即可。建议使用虚拟环境：
 
 ```bash
-git clone https://github.com/Yangtao666China/econ-causal-lab.git
-cd econ-causal-lab
+git clone https://github.com/Yangtao666China/causal-effect-estimation.git
+cd causal-effect-estimation
 python -m venv .venv
 # Windows: .venv\Scripts\activate
 # macOS / Linux: source .venv/bin/activate
